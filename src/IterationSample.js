@@ -21,12 +21,12 @@ const IterationSample = () => {
     const onChange = e => setInputText(e.target.value);
     const onClick = () => {
         const nextNames = names.concat({
-            id: nextId,
+            id: nextId,  //nextId 값을 id로 설정하고
             text: inputText
         });
-        setNextId(nextId + 1);
-        setNames(nextNames);
-        setInputText('');
+        setNextId(nextId + 1); //nextId값에 1을 더해 준다
+        setNames(nextNames); // names 값을 업데이트한다
+        setInputText('');   //inputText를 비운다
     };
     const onRemove = id => {
         const nextNames = names.filter( name => name.id !== id);
